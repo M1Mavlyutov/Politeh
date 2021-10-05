@@ -1,0 +1,142 @@
+#include <iostream>
+#include <math.h>
+#include <locale.h>
+#include <windows.h>
+
+using namespace std;
+
+int main() {
+
+	//добавление русского языка
+	setlocale(LC_ALL, "Russian");
+	
+	//Задание №1
+	{
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+	cout << "Задание №1\n";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+
+	// Переменные
+	int a, b, S, P;
+
+	// Ввод и вывод
+	cout << "Чтобы найти S и P \nВведите число a=";
+	cin >> a;
+	cout << "Введите число b=";
+	cin >> b;
+
+	// Решение
+	S = a * b;
+	P = 2 * (a * b);
+
+	// Вывод
+	cout << "S=" << S << "\nP=" << P; 
+	}
+
+	//Задание №2
+	{
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+	cout << "\n\nЗадание №2 \n";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+
+	int d;
+	float π = 3.14, L;
+
+	// Ввод и вывод
+	cout << "Чтобы найти L \nВведите число d=";
+	cin >> d;
+
+	// Решение
+	L = π * d;
+
+	// Вывод
+	cout << "L=" << L;
+	}
+
+	//Задание №3
+	{
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+	cout << "\n\nЗадание №3\n";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+
+	// Переменные
+	int a, b;
+	float c;
+
+	// Ввод и вывод
+	cout << "Чтобы найти среднее арифметическое a и b\n";
+	cout << "Введите a=";
+	cin >> a;
+	cout << "Введите b=";
+	cin >> b;
+
+	// Решение
+	c = (a + b) / 2;
+
+	// Ответ
+	cout << "Среднее арифметическое чисел a и b=" << c;
+	}
+
+	//Задание №4
+	{
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+	cout << "\n\nЗадание №4\n";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+
+	// Переменные
+	int a, b, c, d, x, y;
+
+	// Ввод и вывод
+	cout << "Чтобы найти сумму, разность, произведение и частное их квадратов\n";
+	cout << "Введите x=";
+	cin >> x;
+	cout << "Введите y=";
+	cin >> y;
+
+	// Решение
+	a = pow(x, 2) + pow(y, 2);
+	b = pow(x, 2) - pow(y, 2);
+	c = pow(x, 2) * pow(y, 2);
+	d = pow(x, 2) / pow(y, 2);
+
+	// Ответ
+	cout << "\nСумма=" << a;
+	cout << "\nРазность=" << b;
+	cout << "\nПроизведение=" << c;
+	cout << "\nЧастное=" << d;
+	}
+
+	//Задание №5
+	{
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+	cout << "\n\nЗадание №5\n";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+
+	//Переменные
+	int x, y, a, b, c, d;
+
+	//Ввод и вывод
+	cout << "Чтобы найти сумму, разность, произведение и частное их модулей\n";
+	cout << "Введите x=";
+	cin >> x;
+	cout << "Введите y=";
+	cin >> y;
+
+	//Решение
+	a = abs(x) + abs(y);
+	b = abs(x) - abs(y);
+	c = abs(x) * abs(y);
+	d = abs(x) / abs(y);
+
+	// Ответ
+	cout << "\nСумма=" << a;
+	cout << "\nРазность=" << b;
+	cout << "\nПроизведение=" << c;
+	cout << "\nЧастное=" << d;
+	
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+	cout << "\n\nКонец!";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+	}
+	return 0;
+}
