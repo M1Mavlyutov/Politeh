@@ -1,0 +1,163 @@
+#include <iostream>
+#include <math.h>
+#include <locale.h>
+
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "Rus");
+	
+	//Задание 1
+	{
+		cout << "Задание 1" << endl;
+
+		float x1, y1, x2, y2, d;
+
+		cout << "Чтобы найти расстояние между точками (х1;y1) и (x2;y2)" << endl;
+		cout << "Введите х1=";
+		cin >> x1;
+		cout << "Введите y1=";
+		cin >> y1;
+		cout << "Введите х2=";
+		cin >> x2;
+		cout << "Введите y2=";
+		cin >> y2;
+
+		d = sqrt(pow((x1 - x2), 2) + pow((y1 - y2), 2));
+
+		cout << "Длина между отрезками с заданными координатами=" << d << endl;
+	}
+
+	//Задание 2
+	{
+		cout << endl << "Задание 2" << endl;
+
+		float A, B, C, AC, BC, sum;
+
+		cout << "Чтобы найти расстояние AC и BC и их сумму" << endl;
+		cout << "Введите А=";
+		cin >> A;
+		cout << "Введите B=";
+		cin >> B;
+		cout << "Введите С=";
+		cin >> C;
+
+		if (A > C) {
+			AC = A - C;
+		}
+		else {
+			AC = C - A;
+		}
+		cout << "AC=" << AC << endl;
+
+		if (B > C) {
+			BC = B - C;
+		}
+		else {
+			BC = C - B;
+		}
+		cout << "BC=" << BC << endl;
+
+		sum = AC + BC;
+		cout << "Сумма AC и BC=" << sum << endl;
+	}
+
+	//Задание 3
+	{
+		cout << endl << "Задание 3" << endl;
+
+		int A, B, C, AC, BC, mul;
+
+		cout << "Чтобы найти произведение длин отрезков AC и BC" << endl;
+		cout << "Введите A=";
+		cin >> A;
+		cout << "Введите C=";
+		cin >> C;
+		cout << "Введите B=";
+		cin >> B;
+
+		if (A < C & C < B) {
+			AC = C - A;
+			BC = B - C;
+			mul = AC * BC;
+
+			cout << "AC=" << AC << endl << "BC=" << BC << endl << "AC*BC=" << mul << endl;
+		}
+
+		else if (B < C & C < A) {
+			AC = A - C;
+			BC = C - B;
+			mul = AC * BC;
+
+			cout << "AC=" << AC << endl << "BC=" << BC << endl << "AC*BC=" << mul << endl;
+		}
+
+		else {
+			cout << "Ошибка: точка С должна стоять межды A и B" << endl;
+		}
+	}
+
+	//Задание 4
+	{
+		cout << endl << "Задание 4" << endl;
+
+		float x1, y1, x2, y2, P, S, a, b;
+
+		cout << "Чтобы найти стороны, периметр и площадь прямоугольника" << endl;
+		cout << "Введите x1=";
+		cin >> x1;
+		cout << "Введите y1=";
+		cin >> y1;
+		cout << "Введите x2=";
+		cin >> x2;
+		cout << "Введите y2=";
+		cin >> y2;
+
+		a = fabs(x2 - x1);
+		b = fabs(y2 - y1);
+		P = (a + b) * 2;
+		S = a * b;
+
+		cout << "a=" << a << endl << "b=" << b << endl << "P=" << P << endl << "S=" << S << endl;
+	}
+
+	//Задание 5
+	{
+		cout << endl << "Задание 5" << endl;
+
+		int x1, y1, x2, y2, x3, y3, a, b, c, P, S, p2;
+
+		cout << "Чтобы найти Периметр и площадь треугольника" << endl;
+		cout << "Введите x1=";
+		cin >> x1;
+		cout << "Введите y1=";
+		cin >> y1;
+		cout << "Введите x2=";
+		cin >> x2;
+		cout << "Введите y2=";
+		cin >> y2;
+		cout << "Введите x3=";
+		cin >> x3;
+		cout << "Введите y3=";
+		cin >> y3;
+
+		a = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
+
+		b = sqrt(pow((x3 - x2), 2) + pow((y3 - y2), 2));
+
+		c = sqrt(pow((x1 - x3), 2) + pow((y1 - y3), 2));
+
+		P = a + b + c;
+
+		p2 = P / 2;
+
+		S = sqrt(p2 * (p2 - a) * (p2 - b) * (p2 - c));
+
+		cout << "a=" << a << endl;
+		cout << "b=" << b << endl;
+		cout << "c=" << c << endl;
+		cout << "P=" << P << endl;
+		cout << "S=" << S << endl;
+	}
+	return 0;
+}
