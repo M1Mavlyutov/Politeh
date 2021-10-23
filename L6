@@ -1,0 +1,149 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+
+    //Задание 1
+    {
+        cout << "Задание 1" << endl;
+        
+        int A, B, C;
+
+        cout << "Чтобы поменять местами содержимое переменных A и B" << endl;
+        cout << "Введите А=";
+        cin >> A;
+        cout << "Введите В=";
+        cin >> B;
+
+        C = A;
+        A = B;
+        B = C;
+
+        cout << "A=" << A << endl;
+        cout << "B=" << B << endl;
+    }
+
+    //Задание 2
+    {
+        cout << endl << "Задание 2" << endl;
+
+        int A, B, C, z, x, c;
+
+        cout << "Чтобы переместить содержимое A в B, B — в C, C — в A" << endl;
+        cout << "Введите А=";
+        cin >> A;
+        cout << "Введите B=";
+        cin >> B;
+        cout << "Введите С=";
+        cin >> C;
+        
+        z = A;
+        x = B;
+        c = C;
+
+        B = z;
+        C = x;
+        A = c;
+
+        cout << "A=" << A << endl << "B=" << B << endl << "C=" << C << endl;
+    }
+
+    //Задание 3
+    {
+        cout << endl << "Задание 3" << endl;
+
+        int A, B, C, z, x, c;
+
+        cout << "Чтобы переместить содержимое A в C, C — в B, B — в A" << endl;
+        cout << "Введите A=";
+        cin >> A;
+        cout << "Введите В=";
+        cin >> B;
+        cout << "Введите С=";
+        cin >> C;
+
+        z = A;
+        x = B;
+        c = C;
+
+        C = z;
+        B = c;
+        A = x;
+
+        cout << "A=" << A << endl << "B=" << B << endl << "C=" << C << endl;
+    }
+    
+    //Задание 4
+    {
+        cout << endl << "Задание 4" << endl;
+
+        int x, y;
+
+        cout << "Чтобы вычислить значение функции y = 3x^6 - 6x^2 - 7" << endl;
+        cout << "Введите x=";
+        cin >> x;
+
+        y = (3 * pow(x, 6)) - (6 * pow(x, 2)) - 7;
+
+        cout << "Функция y=" << y << endl;
+    }
+
+    //Задание 5
+    {
+        cout << endl << "Задание 5" << endl;
+
+        int x, y;
+
+        cout << "Чтобы вычислить значение функции y = 4(x-3)^6 - 7(x-3)^3 + 2" << endl;
+        cout << "Введите x=";
+        cin >> x;
+
+        y = (4 * pow((x - 3), 6)) - (7 * pow((x - 3), 3)) + 2;
+
+        cout << "Функция y=" << y << endl;
+    }
+
+    //Задание 6
+    {
+        cout << endl << "Задание 6" << endl;
+
+        int A, x;
+
+        cout << "Чтобы найти A^8" << endl;
+        cout << "Введите А=";
+        cin >> A;
+
+        x = A * A;
+
+        x = x * x;
+
+        x = x * x;
+
+        cout << "A^8=" << x << endl;
+    }
+
+    //Задание 7
+    {
+        cout << endl << "Задание 7" << endl;
+
+        int A, y, x;
+
+        cout << "Чтобы найти А^15" << endl;
+        cout << "Введите А=";
+        cin >> A;
+
+        x = A * A; // А^2
+        y = x * A; // А^3
+        x = y * x; // А^5
+        y = x;
+        x = y * y; // А^10
+        x = x * y; // А^15
+
+        cout << "A^15=" << x;
+    }
+    return 0;
+}
