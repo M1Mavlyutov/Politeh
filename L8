@@ -1,0 +1,107 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main() {
+
+	setlocale(LC_ALL, "Russian");
+
+	//Задание 1
+	{
+		cout << "Задание 1" << endl;
+
+		int x, y;
+		cout << "Введите размер файла в байтах: ";
+		cin >> x;
+
+		y = x / 1024;
+		if (x % 1024 != 0) y++;
+		cout << "Количество полных килобайтов, которые занимают данный файл: " << y << endl;
+
+	}
+
+	//Задание 2
+	{
+		cout << endl << "Задание 2" << endl;
+
+		int A, B, res;
+		cout << "Введите A=";
+		cin >> A;
+		cout << "Введите B=";
+		cin >> B;
+
+		if (A <= B) {
+			cout << "Ошибка: A должно быть больше чем B" << endl;
+		}
+		else {
+			res = A / B;;
+
+			cout << "Максимально возможное количество отрезков длины B на отрезке А=" << res << endl;
+		}
+	}
+
+	//Задание 3
+	{
+		cout << endl << "Задание 3" << endl;
+
+		int A, B, res;
+
+		cout << "Введите A=";
+		cin >> A;
+		cout << "Введите B=";
+		cin >> B;
+
+		if (A <= B) {
+			cout << "Ошибка: A должно быть больше чем B" << endl;
+		}
+		else {
+			res = A % B;
+
+			cout << "Длинa незанятой части отрезка A=" << res << endl;
+		}
+	}
+
+	//Задание 4
+	{
+		cout << endl << "Задание 4" << endl;
+
+		int x, res;
+		cout << "Введите двузначное число: ";
+		cin >> x;
+
+		if (x < 10 || x > 99) {
+			cout << "Ошибка: число должно быть двузначным" << endl;
+		}
+		else {
+			res = (x / 10) + (x % 10) * 10;
+			if (res < 10) {
+				cout << "0" << res << endl;
+			}
+			else
+			cout << res << endl;
+		}
+	}
+
+	//Задание 5
+	{
+		cout << endl << "Задание 5" << endl;
+
+		int x, res;
+		cout << "Введите трехзначное число: ";
+		cin >> x;
+
+		if (x < 100 || x > 999) {
+			cout << "Ошибка: число должно быть трехзначным" << endl;
+		}
+		else {
+			res = (x % 100 / 10 * 100) + (x % 10) * 10 + x / 100;
+			if (res < 100) {
+				cout << "0" << res << endl;
+			}
+			else
+			cout << res << endl;
+		}
+	}
+	return 0;
+}
