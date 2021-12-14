@@ -1,0 +1,134 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+
+	//Задание 1
+	{
+		cout << "Задание 1" << endl;
+		int A, B;
+		cout << "Введите A:";
+		cin >> A;
+		cout << "Введите B:";
+		cin >> B;
+
+		if (A > 2 && B <= 3) {
+			cout << "Истинно" << endl;
+		}
+		else {
+			cout << "Ложь" << endl;
+		}
+	}
+
+	//Задание 2
+	{
+		cout << endl << "Задание 2" << endl;
+
+		int A, B, C;
+		cout << "Введите A:";
+		cin >> A;
+		cout << "Введите B:";
+		cin >> B;
+		cout << "Введите C:";
+		cin >> C;
+
+		if (A < B && B < C) {
+			cout << "Истинно" << endl;
+		}
+		else {
+			cout << "Ложь" << endl;
+		}
+	}
+
+	//Задание 3
+	{
+		cout << endl << "Задание 3" << endl;
+
+		int A;
+		cout << "Введите A:";
+		cin >> A;
+
+		if (A>9 && A<100 && A%2==0){
+			cout << "Истинно" << endl;
+		}
+		else
+		{
+			cout << "Ложь" << endl;
+		}
+	}
+
+	//Задание 4
+	{
+		cout << endl << "Задание 4" << endl;
+
+		int A;
+		cout << "A:";
+		cin >> A;
+
+		if ((A / 100) > (A % 100 / 10) && (A % 100 / 10) > (A % 10) || (A / 100) < (A % 100 / 10) && (A % 100 / 10) < (A % 10)) {
+			cout << "Истинно" << endl;
+		}
+		else {
+			cout << "Ложь" << endl;
+		}
+	}
+
+	//Задание 5
+	{
+		cout << endl << "Задание 5" << endl;
+
+		int A;
+		cout << "A:";
+		cin >> A;
+
+		if ((A % 10) == (A / 1000) & (A % 100 / 10) == (A % 1000 / 100)) {
+			cout << "Истинно" << endl;
+		}
+		else {
+			cout << "Ложь" << endl;
+		}
+	}
+
+	//Задание 6
+	{
+		cout << endl << "Задание 6" << endl;
+
+		int a, b, c;
+		cout << "Введите a:";
+		cin >> a;
+		cout << "Введите b:";
+		cin >> b;
+		cout << "Введите c:";
+		cin >> c;
+
+		if ((a*a == b*b + c*c) || (b*b == a*a + c*c) || (c*c == a*a + b*b)) {
+			cout << "Истинно" << endl;
+		}
+		else {
+			cout << "Ложь" << endl;
+		}
+	}
+
+	//Задание 7
+	{
+		cout << endl << "Задание 7" << endl;
+
+		int a, b, c;
+		cout << "Введите a:";
+		cin >> a;
+		cout << "Введите b:";
+		cin >> b;
+		cout << "Введите c:";
+		cin >> c;
+
+		if (a + b <= c || a + c <= b || c + b <= a) {
+			cout << "Ложь" << endl;
+		}
+		else cout << "Истинна" << endl;
+		
+	}
+	return 0;
+}
