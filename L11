@@ -1,0 +1,164 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+
+    //Задание 1
+    {
+        cout << "Задание 1" << endl;
+
+        int A, B, max;
+        cout << "Введите А: ";
+        cin >> A;
+        cout << "Введите В: ";
+        cin >> B;
+
+        if (A == B) {
+            A = 0;
+            B = 0;
+            cout << "A = " << A << endl << "B = " << B << endl;
+        }
+        else if (A > B) {
+            B = A;
+            cout << "A = " << A << endl << "B = " << B << endl;
+        }
+        else if (B > A) {
+            A = B;
+            cout << "A = " << A << endl << "B = " << B << endl;
+        }
+    }
+
+    //Задание 2
+    {
+        cout << endl << "Задание 2" << endl;
+
+        int z, x, c, sum;
+        cout << "Введите z:";
+        cin >> z;
+        cout << "Введите x:";
+        cin >> x;
+        cout << "Введите c:";
+        cin >> c;
+
+        if (z > c && x > c) {
+            sum = z + x;
+            cout << "Сумма = " << sum << endl;
+        }
+        else if (z > x && c > x) {
+            sum = z + c;
+            cout << "Сумма = " << sum << endl;
+        }
+        else if (x > z && c > z) {
+            sum = x + c;
+            cout << "Сумма = " << sum << endl;
+        }
+    }
+
+    //Задание 3
+    {
+        cout << endl << "Задание 3" << endl;
+
+        int A1, A2, B1, B2, C1, C2;
+        float AB, AC;
+        cout << "Введите А1: ";
+        cin >> A1;
+        cout << "Введите А2: ";
+        cin >> A2;
+        cout << "Введите В1: ";
+        cin >> B1;
+        cout << "Введите В2: ";
+        cin >> B2;
+        cout << "Введите С1: ";
+        cin >> C1;
+        cout << "Введите С2: ";
+        cin >> C2;
+
+        AB = sqrt((B1 - A1) * (B1 - A1) + (B2 - A2) * (B2 - A2));
+        AC = sqrt((C1 - A1) * (C1 - A1) + (C2 - A2) * (C2 - A2));
+
+        if (AB < AC) {
+            cout << "Точка В находится ближе к А, Расстояние равно = " << AB << endl;
+        }
+        else if (AB > AC) {
+            cout << "Точка С находится ближе к А, Расстояние равно = " << AC << endl;
+        }
+        else if (AB == AC) cout << "Точки В и С равноудалены от точки А";
+    }
+
+    //Задание 4
+    {
+        cout << endl << "Задание 4" << endl;
+
+        int x, y;
+        cout << "Введите х: ";
+        cin >> x;
+        cout << "Введите y: ";
+        cin >> y;
+
+        if ((x > 0) & (y > 0)) { cout << "I" << endl; }
+        else if ((x < 0) & (y > 0)) { cout << "II" << endl; }
+        else if ((x < 0) & (y < 0)) { cout << "III" << endl; }
+        else { cout << "IV" << endl; }
+    }
+
+    //Задание 5
+    {
+        cout << endl << "Задание 5" << endl;
+
+        int X;
+        cout << "Введите Х: ";
+        cin >> X;
+
+        if (X == 0) {
+            cout << "Число нулевое" << endl;
+        }
+        else {
+            if (X > 0) {
+                cout << "Положительное ";
+            }
+            else {
+                cout << "Отрицательное ";
+            }
+            if ((X % 2) == 0) {
+                cout << "четное число" << endl;
+            }
+            else {
+                cout << "нечетное число" << endl;
+            }
+        }
+    }
+
+    //Задание 6
+    {
+        cout << endl << "Задание 6" << endl;
+
+        int X;
+        cout << "Введите число Х лежащее в диапазоне (1–999): ";
+        cin >> X;
+
+        if (X < 1 || X > 999) {
+            cout << "Число должно быть в диапазоне (1–999)" << endl;
+        }
+        else {
+            if ((X % 2) == 0) {
+                cout << "Четное ";
+            }
+            else {
+                cout << "Нечетное ";
+            }
+            if (X < 10) {
+                cout << "однозначное число" << endl;
+            }
+            else if (X > 9 && X < 100) {
+                cout << "двузначное число" << endl;
+            }
+            else if (X > 99) {
+                cout << "трехзначное число" << endl;
+            }
+        }
+    }
+    return 0;
+}
