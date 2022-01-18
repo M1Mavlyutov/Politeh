@@ -1,0 +1,98 @@
+#include <iostream>
+#include <math.h>
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+
+    //Задание 1
+    {
+        cout << "Задание 1" << endl;
+
+        float x, p, res;
+
+        cout << "Введите цену за 1 кг конфет:";
+        cin >> p;
+
+        for (x = 0.1; x < 1.1; x += 0.1) {
+            cout << "Цена за " << x << " кг = " << x * p << endl;
+        }
+    }
+
+    //Задание 2
+    {
+        cout << endl << "Задание 2" << endl;
+        
+        int N;
+        float i, r = 1;
+
+        cout << "Введите целое число N = ";
+        cin >> N;
+
+        for (i = 1; i <= N; i++) {
+            r = r * (1 + 0.1 * i);
+          }
+        cout << "результат = " << r << endl;
+    }
+
+    //Задание 3
+    {
+        cout << endl << "Задание 3" << endl;
+
+        int N, i, sum = 0;
+
+        cout << "Введите целое число N = ";
+        cin >> N;
+
+        for (i = 1; i <= (2 * N - 1); i += 2) {
+            sum += i;
+            cout << "Сумма = " << sum << endl;
+        }
+    }
+
+    //Задание 4
+    {
+        cout << endl << "Задание 4" << endl;
+
+        int A, N, k, i=0, sum=0;
+
+        cout << "Введите A:";
+        cin >> A;
+        cout << "Введите N(N > 0):";
+        cin >> N;
+
+        for (k = 0; k <= N; k++) {
+            i = pow(A, k);
+            sum += i;
+            cout << i << endl;
+        }
+
+        cout << "Сумма = " << sum << endl;
+    }
+
+    //Задание 5
+    {
+        cout << endl << "Задание 5" << endl;
+
+        int A, N, k, i = 0, res = 0;
+
+        cout << "Введите A:";
+        cin >> A;
+        A = -A;
+        cout << "Введите N(N > 0):";
+        cin >> N;
+        
+        for (k = 0; k <= N; k++) {
+            i = pow(A, k);
+            res += i;
+            cout << i << endl;
+        }
+
+        cout << "Сумма = " << res << endl;
+    }
+
+    return 0;
+}
