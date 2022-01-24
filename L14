@@ -1,0 +1,117 @@
+#include <iostream>
+#include <math.h>
+#include <stdio.h>
+
+using namespace std;
+
+int main() {
+
+	setlocale(LC_ALL, "Russian");
+
+	//Задание 1
+	{
+		cout << "Задание 1" << endl;
+
+		int A, B;
+
+		cout << "Введите A (A < B):";
+		cin >> A;
+		cout << "Введите B:";
+		cin >> B;
+
+		int i, i2;
+		for (i = A; i <= B; i++) {
+			for (i2 = 1; i2 <= i; i2++)
+				cout << i << " ";
+			cout << endl;
+		}
+	}
+
+	//Задание 2
+	{
+		cout << endl << "Задание 2" << endl;
+
+		int A, B, i, j;
+		cout << "Введите A (A>B): ";
+		cin >> A;
+		cout << "Введите B: ";
+		cin >> B;
+		while (A >= 0) {
+			A -= B;
+			j = A + B;
+		}
+		cout << "Длина незанятой части = " << j << endl;
+	}
+
+	//Задание 3
+	{
+		cout << endl << "Задание 3" << endl;
+
+		int N, i, k = 0;
+		cout << "Введите N: ";
+		cin >> N;
+
+		for (i = 0; i < N; i += k) {
+			k++;
+		}
+		cout << "K = " << k << endl;
+		cout << "Сумма = " << i << endl;
+	}
+
+	//Задание 4
+	{
+		cout << endl << "Задание 4" << endl;
+
+		float P, S, n;
+		int K;
+		cout << "Введите P % (до 20%): ";
+		cin >> P;
+		K = 0;
+		S = 1000;
+		while (S <= 1100) {
+			++K;
+			S += S * P / 100;
+		}
+		cout << "Количество месяцев = " << K;
+		cout << "\nИтоговый размер вклада = " << S << endl;
+	}
+
+	//Задание 5
+	{
+		cout << endl << "Задание 5" << endl;
+
+		int A, B, sum;
+		cout << "Введите A: ";
+		cin >> A;
+		cout << "Введите B: ";
+		cin >> B;
+		while ((A != 0) & (B != 0)) {
+			if (A > B)
+				A = A % B;
+			else
+				B = B % A;
+		}
+		sum = A + B;
+		cout << "НОД = " << sum << endl;
+	}
+
+	//Задание 6
+	{
+		cout << endl << "Задание 6" << endl;
+
+		int n;
+		cout << "Введите N:";
+		cin >> n;
+
+		int f1 = 1, f2 = 1, f = 0, k = 2;
+		while (f < n) {
+			++k;
+			f = f2 + f1;
+			f2 = f1;
+			f1 = f;
+		}
+		cout << "K = " << k;
+	}
+
+	return 0;
+}
